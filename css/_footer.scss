@@ -1,0 +1,18 @@
+footer {
+    background-color: #333;
+    p {
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+        line-height: 1.6;
+        a {
+            transition: .3s;
+            color: hsl(0, 0%, 50%);
+            &:hover {
+                text-decoration: underline;
+                color: hsl(0, 0%, 70%);
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 30px;
+    height: 91px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    z-index: 11111;
+    background-color: white;
+    @media (min-width: 768px){
+        nav {
+            display: block !important;
+            .close {
+                display: none;
+            }
+            ul {
+                display: flex;
+                gap: 20px;
+            }
+        }
+        .menu {
+            display: none !important;
+        }
+    }
+    @media (max-width:767px) {
+        position: relative;
+        nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            ul {
+                padding: 50px;
+                li {
+                    padding-top: 10px;
+                    &:not(:last-of-type) {
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #eee;
+                    }
+                    a {
+                        text-align: center;
+                        color: #eee !important;
+                    }
+                }
+            }
+            .close {
+                position: absolute;
+                top: 30px;
+                right: 32px;
+                i {
+                    color: #eee !important;
+                }
+            }
+        }
+    }
+    .logo {
+        .logo-link {
+            display: block;
+            width: fit-content;
+            font-size: 40px;
+            font-weight: bolder;
+            color: #111;
+        }
+    }
+    nav {
+        display: none;
+        ul {
+            li {
+                a {
+                    display: block;
+                    font-size: 18px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    color: #333;
+                    transition: .3s;
+                    text-transform: capitalize;
+                    &:hover {
+                        color: #888;
+                    }
+                }
+            }
+        }
+    }
+    .menu i,
+    .close i {
+        display: block;
+        font-size: 30px;
+        color: #333;
+        cursor: pointer;
+    }
+}

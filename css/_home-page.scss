@@ -1,0 +1,373 @@
+/* landing */ 
+.landing {
+    @media (min-width: 768px) {
+        background-image: url("../images/landing-desk.jpg") !important;
+        margin-top: 91px;
+        .container {
+            h1 {
+                font-size: 60px !important;
+            }
+        }
+    }
+    height: calc(100vh - 91px);
+    background-image: url("../images/landing-mob.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .4);;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .container {
+        h1 {
+            font-size: 40px;
+            font-weight: bolder;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            position: relative;
+        }
+    }
+}
+/* landing */ 
+
+/* services */
+.services {
+    background-color: white;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 50px;
+        .box {
+            text-align: center;
+            color: $main-color;
+            i {
+                display: block;
+                margin: 0 auto 20px;
+                font-size: 30px;
+            }
+            h3 {
+                font-size: 30px;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 15px;
+                letter-spacing: 1px;
+                line-height: 1.6;
+                text-align: center;
+            }
+        }
+    }
+}
+/* services */
+
+/* our-courses */ 
+.our-courses {
+    @media (max-width: 767px) {
+        background-size: 100% 20% !important;
+        &::before {
+            height: 20% !important;
+        }
+    }
+    background-color: white;
+    background-image: url("../images/bg-course.png");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    position: relative;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 50%;
+        background-color: rgba(0, 0, 0, .4);;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .container {
+        position: relative;
+        h2 {
+            font-size: 40px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+        p {
+            font-size: 16px;
+            letter-spacing: 1px;
+            line-height: 1.7;
+            color: white;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto 60px;
+        }
+        .boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            .box {
+                img {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                h3 {
+                    font-size: 25px;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    margin-bottom: 30px;
+                    color: $main-color;
+                }
+                p {
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    line-height: 1.7;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+}
+/* our-courses */ 
+
+/* our-teachers */ 
+.our-teachers {
+    background-color: #eee;
+    .container {
+        h2 {
+            font-size: 40px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            color: $main-color;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        & > p {
+            font-size: 16px;
+            line-height: 1.7;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 600px;
+            margin-bottom: 50px;
+        }
+        .teachers {
+            @media (max-width: 921px) {
+                flex-wrap: wrap;
+            }
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+            .teacher {
+                @media (max-width: 600px) {
+                    flex-direction: column;
+                    h3 {
+                        text-align: center;
+                    }
+                    h4 {
+                        text-align: center;
+                    }
+                    p {
+                        text-align: center;
+                    }
+                    .social {
+                        justify-content: center;
+                    }
+                }
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                h3 {
+                    font-size: 30px;
+                    color: $main-color;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    margin-bottom: 10px;
+                }
+                h4 {
+                    font-size: 20px;
+                    color: $main-color;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 15px;
+                    color: $main-color;
+                    line-height: 1.7;
+                    letter-spacing: 1px;
+                    margin-bottom: 10px;
+                }
+                .social {
+                    display: flex;
+                    gap: 20px;
+                    a {
+                        i {
+                            font-size: 20px;
+                            color: $main-color;
+                            transition: .3s;
+                        }
+                        &:hover {
+                            i {
+                                color: #888;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* our-teachers */ 
+
+/* statics */ 
+.statics {
+    background-image: url("../images/static.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .4);;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .container {
+        .boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            .box {
+                position: relative;
+                h3 {
+                    font-size: 60px;
+                    font-weight: bolder;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    color: white;
+                }
+                p {
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+/* statics */ 
+/* blog */
+.blog {
+    background-color: white;
+    .container {
+        h2 {
+            text-align: center;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            font-size: 40px;
+            color: $main-color;
+            margin-bottom: 30px;
+        }
+        & > p {
+            font-size: 16px;
+            letter-spacing: 1px;
+            line-height: 1.7;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            max-width: 700px;
+        }
+        .boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            .box {
+                @media (max-width: 500px) {
+                    h3, p {
+                        text-align: center;
+                    }
+                }
+                h3 {
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    font-size: 35px;
+                    color: $main-color;
+                    margin-bottom: 30px;
+                    margin-top: 30px;
+                }
+                p {
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    line-height: 1.7;
+                    margin-bottom: 20px;
+                    &.italic {
+                        font-style: italic;
+                        padding-left: 30px;
+                        position: relative;
+                        margin-top: 20px;
+                        &::before {
+                            content: "";
+                            height: 100%;
+                            width: 5px;
+                            background-color: $main-color;
+                            position: absolute;
+                            left: 10px;
+                            top: 0;
+                        }
+                    }
+                }
+                .image {
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+/* blog */
+
+/* companies */
+.companies {
+    background-color: #f2f2f2;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+} 
+/* companies */ 
